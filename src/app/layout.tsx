@@ -37,6 +37,9 @@ export const metadata: Metadata = {
     title: "Gul Nis Homey Cakes",
     description: "Freshly baked cakes, brownies, cookies and more.",
   },
+  icons: {
+    icon: "/gulnis.svg",
+  },
 };
 
 export default function RootLayout({
@@ -65,6 +68,7 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${inter.variable} ${playfair.variable} ${greatVibes.variable} h-full antialiased scroll-smooth`}
+      data-scroll-behavior="smooth"
     >
       <body className="min-h-full flex flex-col">
         {/* JSON-LD Schema Script */}

@@ -1,77 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Image from "next/image";
 import FadeIn from "./animations/FadeIn";
 import StaggerReveal from "./animations/StaggerReveal";
-
-// Placeholder data since Sanity isn't fully connected yet
-const mockProducts = [
-  {
-    _id: "1",
-    name: "Chocolate Truffle Cake",
-    price: 850,
-    category: "cakes",
-    image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-    available: true,
-  },
-  {
-    _id: "2",
-    name: "Red Velvet Cake",
-    price: 900,
-    category: "cakes",
-    image: "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-    available: true,
-  },
-  {
-    _id: "3",
-    name: "Carrot & Dates Cake",
-    price: 700,
-    category: "cakes",
-    image: "https://images.unsplash.com/photo-1605807646983-377bc5a76493?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-    available: true,
-  },
-  {
-    _id: "4",
-    name: "Plum Cake",
-    price: 650,
-    category: "plum-cake",
-    image: "https://images.unsplash.com/photo-1608681283626-d62111d4d122?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-    available: true,
-  },
-  {
-    _id: "5",
-    name: "Brownie Box (6 pcs)",
-    price: 450,
-    category: "brownies",
-    image: "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-    available: true,
-  },
-  {
-    _id: "6",
-    name: "Chocolate Chip Cookies",
-    price: 300,
-    category: "cookies",
-    image: "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-    available: true,
-  },
-  {
-    _id: "7",
-    name: "Double Chocolate Brownies",
-    price: 400,
-    category: "brownies",
-    image: "https://images.unsplash.com/photo-1599599810769-bcde5a160d32?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-    available: true,
-  },
-  {
-    _id: "8",
-    name: "Tender Coconut Pudding",
-    price: 250,
-    category: "desserts",
-    image: "https://images.unsplash.com/photo-1551024601-bec78aea704b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-    available: true,
-  },
-];
+import { urlForImage } from "@/sanity/lib/image";
 
 const categories = [
   { name: "All", slug: "all" },
@@ -83,7 +15,7 @@ const categories = [
   { name: "Custom Cakes", slug: "custom-cakes" },
 ];
 
-export default function AllProducts() {
+export default function AllProducts({ products = [] }: { products?: any[] }) {
   const [activeCategory, setActiveCategory] = useState("all");
   const [whatsappNumber, setWhatsappNumber] = useState("0000000000");
 
@@ -106,10 +38,20 @@ export default function AllProducts() {
     return () => window.removeEventListener("hashchange", handleHashChange);
   }, []);
 
+  // Format products from Sanity
+  const formattedProducts = products.map((product) => ({
+    _id: product._id,
+    name: product.name,
+    price: product.price,
+    category: product.category,
+    image: product.image ? urlForImage(product.image)?.url() : "",
+    available: product.available,
+  }));
+
   const filteredProducts =
     activeCategory === "all"
-      ? mockProducts
-      : mockProducts.filter((product) => product.category === activeCategory);
+      ? formattedProducts
+      : formattedProducts.filter((product) => product.category === activeCategory);
 
   const getWhatsAppUrl = (productName: string, price: number) => {
     const text = encodeURIComponent(

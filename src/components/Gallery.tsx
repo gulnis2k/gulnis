@@ -1,41 +1,26 @@
 import FadeIn from "./animations/FadeIn";
 import StaggerReveal from "./animations/StaggerReveal";
+import { client } from "@/sanity/lib/client";
+import { urlForImage } from "@/sanity/lib/image";
+import type { Image } from "sanity";
 
-export default function Gallery() {
-  const images = [
-    {
-      src: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-      alt: "Beautiful layered cake",
-    },
-    {
-      src: "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-      alt: "Freshly baked brownies",
-    },
-    {
-      src: "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-      alt: "Chocolate chip cookies",
-    },
-    {
-      src: "https://images.unsplash.com/photo-1551024601-bec78aea704b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-      alt: "Delicious dessert",
-    },
-    {
-      src: "https://images.unsplash.com/photo-1608681283626-d62111d4d122?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-      alt: "Plum cake",
-    },
-    {
-      src: "https://images.unsplash.com/photo-1535141192574-5d4897c12636?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-      alt: "Custom celebration cake",
-    },
-    {
-      src: "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-      alt: "Red velvet cake",
-    },
-    {
-      src: "https://images.unsplash.com/photo-1605807646983-377bc5a76493?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-      alt: "Carrot cake",
-    },
-  ];
+export default async function Gallery() {
+  const query = `*[_type == "gallery"][0]`;
+  const galleryData = await client.fetch(query);
+  
+  let images: any[] = [];
+
+  if (galleryData?.images && galleryData.images.length > 0) {
+    images = galleryData.images.map((img: Image, index: number) => ({
+      src: urlForImage(img)?.url() || "",
+      alt: `Gallery image ${index + 1}`
+    })).filter((img: any) => img.src !== "");
+  }
+
+  // If there are no images in Sanity, do not render the section
+  if (images.length === 0) {
+    return null;
+  }
 
   return (
     <section className="py-20 bg-[#FAF8F5]" id="gallery">
