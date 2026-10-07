@@ -38,12 +38,14 @@ export const productType = defineType({
       type: 'string',
       options: {
         list: [
-          { title: 'Cakes', value: 'cakes' },
           { title: 'Brownies', value: 'brownies' },
+          { title: 'Blondie', value: 'blondie' },
+          { title: 'Cookie pie', value: 'cookie-pie' },
           { title: 'Cookies', value: 'cookies' },
-          { title: 'Desserts', value: 'desserts' },
-          { title: 'Plum Cake', value: 'plum-cake' },
-          { title: 'Custom Cakes', value: 'custom-cakes' },
+          { title: 'Waffles', value: 'waffles' },
+          { title: 'Hot chocolate', value: 'hot-chocolate' },
+          { title: 'Cakes', value: 'cakes' },
+          { title: 'Chocolates', value: 'chocolates' },
         ],
       },
       validation: (rule) => rule.required(),

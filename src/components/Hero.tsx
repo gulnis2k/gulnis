@@ -114,6 +114,7 @@ export default function Hero() {
           alt="Freshly baked homemade desserts including brownies, blondies, and custom cakes in Coimbatore"
           fill
           priority
+          sizes="(max-width: 1024px) 100vw, 60vw"
           className="object-cover object-center lg:object-right"
         />
       </div>
