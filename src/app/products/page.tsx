@@ -9,6 +9,8 @@ export const metadata = {
   description: "Explore our full menu of freshly baked cakes, brownies, blondies, and more in Coimbatore.",
 };
 
+export const revalidate = 30; // Revalidate every 30 seconds
+
 export default async function ProductsPage() {
   // Fetch products
   const query = `*[_type == "product"] | order(displayOrder asc)`;
