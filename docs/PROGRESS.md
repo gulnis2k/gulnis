@@ -108,7 +108,36 @@ Status: COMPLETE
 - Included the brand, tagline, navigation links, and social links.
 - Implemented dynamic copyright year.
 
+## Milestone 11 — SEO Phase 1 (Technical Foundations)
+Status: COMPLETE
+
+### Completed
+- Added `sitemap.ts` and `robots.ts` for dynamic XML generation.
+- Upgraded standard `<img>` tags to Next.js `<Image>` for WebP conversion and lazy loading.
+- Added `aria-label` attributes to interactive elements and WhatsApp buttons.
+- Implemented `LocalBusiness`/`Bakery` JSON-LD schema.
+
+## Milestone 12 — SEO Phase 2 (CMS & Verification)
+Status: COMPLETE
+
+### Completed
+- Verified business address to Coimbatore across metadata and contact sections.
+- Verified domain as `https://gulnis.in`.
+- Updated Sanity Product schema to include `imageAlt` with frontend integration.
+- Added dynamic `Product` JSON-LD schema for CMS products.
+- Ran production build validation without errors.
+
+## Milestone 13 — FINAL CLIENT DATA INTEGRATION
+Status: COMPLETE
+
+### Completed
+- Verified and applied official business name: "Gul NiS Homey Bakes by SK"
+- Integrated verified address, phone number (9047220070), and formatted WhatsApp links with India country code (+91).
+- Added exact verified Google Maps location embed.
+- Verified and injected correct social media URLs (Instagram, Facebook, YouTube).
+- Verified and updated operating hours (9:00 AM - 6:00 PM).
+- Completed global brand search and purged all outdated name references.
+- Ran final production build and QA tests successfully.
+
 ### Next Steps
-- SEO + structured data (Milestone 11)
-- Accessibility + responsive QA (Milestone 12)
-- Performance optimization (Milestone 13)
+- DEPLOY TO gulnis.in

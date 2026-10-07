@@ -5,25 +5,29 @@ export default function About() {
   return (
     <section className="bg-[#FAF8F5] relative overflow-hidden flex flex-col md:flex-row items-stretch" id="about">
       
-      {/* Left side Image with Dark Background */}
-      <FadeIn direction="left" className="flex-1 w-full bg-[#2A1B16] relative min-h-[400px] md:min-h-full">
+      {/* Left side Image Container */}
+      <FadeIn direction="left" className="flex-1 w-full relative min-h-[500px] md:min-h-full flex items-center justify-center p-8 md:p-12 lg:p-16">
+        
         {/* Decorative Script */}
-        <div className="absolute top-16 left-12 z-20 text-[#FAF8F5] transform rotate-[-10deg]">
-          <span className="font-script text-4xl leading-tight flex flex-col">
+        <div className="absolute top-12 left-8 md:top-20 md:left-12 z-20 text-[#3A261D] transform rotate-[-10deg]">
+          <span className="font-script text-4xl md:text-5xl leading-tight flex flex-col">
             <span>More</span>
             <span>than just</span>
             <span>Cakes ♡</span>
           </span>
         </div>
         
-        {/* Using a placeholder for the cupcake/piping image from the reference */}
-        <img
-          src="https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-          alt="Piping chocolate frosting on a cupcake"
-          className="absolute inset-0 w-full h-full object-cover mix-blend-luminosity opacity-80"
-        />
-        {/* Gradient overlay to match the reference lighting */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#2A1B16] via-transparent to-transparent"></div>
+        {/* Vertical Rectangle Image */}
+        <div className="relative w-full max-w-[320px] md:max-w-[380px] aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl border-4 border-white mt-8 md:mt-0">
+          <Image
+            src="/images/baking.webp"
+            alt="About Gul NiS Homey Bakes"
+            fill
+            sizes="(max-width: 768px) 90vw, 50vw"
+            className="object-cover hover:scale-105 transition-transform duration-700"
+          />
+        </div>
+        
       </FadeIn>
 
       {/* Right side Text Content */}
@@ -40,7 +44,7 @@ export default function About() {
         </div>
 
         <p className="text-[#3A261D]/80 text-lg mb-10 leading-relaxed max-w-xl">
-          At Gul Nis Homey Cakes, we believe every bite should feel like a celebration. From classic cakes to indulgent brownies and delightful desserts, we create homemade treats using the finest ingredients, baked with love and care.
+          At Gul NiS Homey Bakes by SK, we believe every bite should feel like a celebration. From classic cakes to indulgent brownies and delightful desserts, we create homemade treats using the finest ingredients, baked with love and care.
         </p>
         
         {/* Horizontal Pill Badges */}
@@ -61,12 +65,6 @@ export default function About() {
             <span className="w-8 h-8 rounded-full bg-[#F3EBE6] flex items-center justify-center text-sm">😊</span>
             <span className="text-xs font-bold text-[#3A261D]">Customer Happiness</span>
           </div>
-        </div>
-
-        <div>
-          <button className="border border-[#3A261D] text-[#3A261D] hover:bg-[#3A261D] hover:text-[#FAF8F5] px-6 py-2 rounded-full font-medium transition-colors text-sm flex items-center gap-2 w-max">
-            Our Story <span>&rarr;</span>
-          </button>
         </div>
 
         {/* Decorative subtle plant illustration overlay (approximated with CSS for now) */}

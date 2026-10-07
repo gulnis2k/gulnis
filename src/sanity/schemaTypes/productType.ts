@@ -57,6 +57,12 @@ export const productType = defineType({
       },
     }),
     defineField({
+      name: 'imageAlt',
+      title: 'Image Alt Text',
+      type: 'string',
+      description: 'Alternative text for SEO and screen readers. Falls back to product name if empty.',
+    }),
+    defineField({
       name: 'available',
       title: 'Available',
       type: 'boolean',
@@ -64,7 +70,7 @@ export const productType = defineType({
     }),
     defineField({
       name: 'featured',
-      title: 'Featured',
+      title: 'Featured (Best Seller)',
       type: 'boolean',
       initialValue: false,
     }),

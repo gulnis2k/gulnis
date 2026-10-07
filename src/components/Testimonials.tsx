@@ -22,6 +22,9 @@ export default async function Testimonials() {
     return null;
   }
 
+  // Slice to max 3 testimonials
+  const limitedTestimonials = testimonialsToDisplay.slice(0, 3);
+
   return (
     <section className="py-24 bg-[#F4EDE7] relative overflow-hidden" id="testimonials">
       {/* Decorative Elements */}
@@ -50,11 +53,11 @@ export default async function Testimonials() {
         </FadeIn>
 
         {/* Testimonials Grid */}
-        <StaggerReveal className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {testimonialsToDisplay.map((testimonial) => (
+        <StaggerReveal className={`flex flex-wrap justify-center gap-8`}>
+          {limitedTestimonials.map((testimonial) => (
             <div 
               key={testimonial.id}
-              className="bg-[#FCFBF8] rounded-3xl p-8 shadow-sm border border-[#E9DED4] hover:shadow-md transition-shadow flex flex-col justify-between"
+              className="bg-[#FCFBF8] rounded-3xl p-8 shadow-sm border border-[#E9DED4] hover:shadow-md transition-shadow flex flex-col justify-between w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] max-w-md"
             >
               <div>
                 <div className="flex gap-1 mb-6 text-[#C18861]">

@@ -50,12 +50,26 @@ export default async function Gallery() {
           </div>
         </FadeIn>
 
-        {/* 4x2 Grid of Squares */}
-        <StaggerReveal staggerAmount={0.1} direction="up" className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {/* Gallery Grid */}
+        <StaggerReveal 
+          staggerAmount={0.1} 
+          direction="up" 
+          className={
+            images.length < 4 
+              ? "flex flex-wrap justify-center gap-4" 
+              : "grid grid-cols-2 md:grid-cols-4 gap-4"
+          }
+        >
           {images.map((img, index) => (
             <div
               key={index}
-              className="relative aspect-square rounded-2xl overflow-hidden group shadow-sm border border-gray-100"
+              className={`relative aspect-square rounded-2xl overflow-hidden group shadow-sm border border-gray-100 ${
+                images.length === 1 
+                  ? "w-full max-w-sm" 
+                  : images.length < 4 
+                    ? "w-[calc(50%-0.5rem)] md:w-[calc(33.333%-0.67rem)] max-w-xs"
+                    : ""
+              }`}
             >
               <div className="absolute inset-0 bg-[#F3EBE6]"></div>
               <img

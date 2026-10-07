@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://gulnis.vercel.app/sitemap.xml',
+    sitemap: 'https://gulnis.in/sitemap.xml',
   }
 }
