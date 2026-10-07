@@ -31,11 +31,20 @@ export const metadata: Metadata = {
     siteName: "Gul NiS Homey Bakes by SK",
     locale: "en_IN",
     type: "website",
+    images: [
+      {
+        url: "/images/logo.webp",
+        width: 1200,
+        height: 630,
+        alt: "Gul NiS Homey Bakes by SK",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Gul NiS Homey Bakes by SK",
     description: "Freshly baked brownies, blondies, cookie pies, cookies, waffles, hot chocolate, cakes, and chocolates. Homemade desserts from Gul NiS Homey Bakes by SK in Coimbatore.",
+    images: ["/images/logo.webp"],
   },
   icons: {
     icon: "/gulnis.svg",
