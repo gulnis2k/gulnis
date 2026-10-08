@@ -81,7 +81,7 @@ export default function Contact() {
           </FadeIn>
 
           {/* Map Embed (Right Side) */}
-          <FadeIn direction="left" delay={0.4} className="flex-[2] w-full relative">
+          <div className="flex-[2] w-full relative">
             {/* Decorative script */}
             <div className="absolute -right-8 -top-12 z-20 text-[#3A261D]/40 transform rotate-[-5deg] hidden lg:block">
               <span className="font-script text-4xl leading-tight flex flex-col items-center">
@@ -103,7 +103,7 @@ export default function Contact() {
                 className="w-full h-full grayscale hover:grayscale-0 transition-all duration-700"
               ></iframe>
             </div>
-          </FadeIn>
+          </div>
 
         </div>
       </div>

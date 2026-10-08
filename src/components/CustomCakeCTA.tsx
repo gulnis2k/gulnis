@@ -54,7 +54,7 @@ export default function CustomCakeCTA() {
               </div>
 
               {/* Decorative Script Text floating on the side */}
-              <div className="absolute -right-16 sm:-right-24 md:-right-32 lg:-right-40 bottom-0 md:top-1/2 md:-translate-y-1/2 text-[#3A261D] transform rotate-[-10deg] translate-x-10 md:translate-x-16 z-20">
+              <div className="absolute -right-6 sm:-right-12 md:-right-32 lg:-right-40 -bottom-6 md:bottom-auto md:top-1/2 md:-translate-y-1/2 text-[#3A261D] transform rotate-[-10deg] md:translate-x-16 z-20 scale-[0.65] sm:scale-75 md:scale-100 origin-bottom-right">
                 <div className="bg-white/80 backdrop-blur-sm px-6 py-4 rounded-3xl shadow-sm border border-white">
                   <span className="font-script text-3xl md:text-5xl lg:text-6xl leading-tight flex flex-col items-center">
                     <span>Your</span>
