@@ -13,16 +13,28 @@ export default function Footer() {
             {/* BRAND COLUMN */}
             <div className="max-w-[320px]">
               <div className="flex flex-col items-start mb-6 w-fit">
-                <span className="font-script text-4xl md:text-5xl text-[#F9F6F1] leading-none -mb-1">Gul NiS</span>
-                <span className="font-sans text-[0.65rem] md:text-xs tracking-[0.2em] uppercase text-[#F9F6F1]">HOMEY BAKES BY SK</span>
+                <Image 
+                  src="/images/gulnis-logo.png" 
+                  alt="Gul NiS Homey Cakes Logo" 
+                  width={180} 
+                  height={70} 
+                  className="w-auto h-16 md:h-20 object-contain"
+                />
               </div>
               <p className="text-[#CEAC92] text-[15px] leading-[1.7] mb-6 font-sans">
                 Baking happiness from our home to yours. Every treat is crafted with love and the finest ingredients to make your celebrations truly special.
               </p>
-              {/* Subtle heart decoration */}
-              <svg className="text-[#C18861] w-5 h-5 opacity-80" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-              </svg>
+              
+              {/* FSSAI License */}
+              <div className="mt-2 bg-white/5 inline-block px-4 py-3 rounded-md border border-[rgba(206,172,146,0.15)]">
+                <Image 
+                  src="/images/fssai-lic-no.png" 
+                  alt="FSSAI License" 
+                  width={240} 
+                  height={80} 
+                  className="w-auto h-16 md:h-20 object-contain"
+                />
+              </div>
             </div>
 
             {/* EXPLORE COLUMN */}
@@ -96,7 +108,7 @@ export default function Footer() {
         {/* BOTTOM BAR & DIVIDER */}
         <div className="pt-7 border-t border-[rgba(206,172,146,0.20)] flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-[#CEAC92] text-[13px] font-sans text-center md:text-left">
-            © 2026 Gul NiS Homey Bakes by SK. All rights reserved.
+            © 2026 Gul NiS Homey Cakes by SK. All rights reserved.
           </p>
           {/* Privacy & Terms purposely omitted until pages exist per specification */}
           <p className="text-[#CEAC92] text-[13px] font-sans text-center md:text-right">

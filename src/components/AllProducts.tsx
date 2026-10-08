@@ -64,7 +64,7 @@ export default function AllProducts({ products = [] }: { products?: any[] }) {
     "@type": "Product",
     "name": product.name,
     "image": product.image || "https://gulnis.in/images/hero-image.webp",
-    "description": product.description || `Freshly baked ${product.name} from Gul NiS Homey Bakes by SK.`,
+    "description": product.description || `Freshly baked ${product.name} from Gul NiS Homey Cakes by SK.`,
     "offers": {
       "@type": "Offer",
       "priceCurrency": "INR",

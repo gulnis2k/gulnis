@@ -17,14 +17,15 @@ export default function About() {
           </span>
         </div>
         
-        {/* Vertical Rectangle Image */}
-        <div className="relative w-full max-w-[320px] md:max-w-[380px] aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl border-4 border-white mt-8 md:mt-0">
-          <Image
-            src="/images/baking.webp"
-            alt="About Gul NiS Homey Bakes"
-            fill
-            sizes="(max-width: 768px) 90vw, 50vw"
-            className="object-cover hover:scale-105 transition-transform duration-700"
+        {/* Vertical Rectangle Video */}
+        <div className="relative w-full max-w-[320px] md:max-w-[380px] aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl border-4 border-white mt-8 md:mt-0 bg-[#E5D8CF]">
+          <video
+            src="/videos/about.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="object-cover w-full h-full hover:scale-105 transition-transform duration-700"
           />
         </div>
         
@@ -44,7 +45,7 @@ export default function About() {
         </div>
 
         <p className="text-[#3A261D]/80 text-lg mb-10 leading-relaxed max-w-xl">
-          At Gul NiS Homey Bakes by SK, we believe every bite should feel like a celebration. From classic cakes to indulgent brownies and delightful desserts, we create homemade treats using the finest ingredients, baked with love and care.
+          At Gul NiS Homey Cakes by SK, we believe every bite should feel like a celebration. From classic cakes to indulgent brownies and delightful desserts, we create homemade treats using the finest ingredients, baked with love and care.
         </p>
         
         {/* Horizontal Pill Badges */}

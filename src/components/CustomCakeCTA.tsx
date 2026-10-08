@@ -45,7 +45,7 @@ export default function CustomCakeCTA() {
             <div className="relative w-[90%] max-w-[400px] aspect-square bg-white rounded-full shadow-xl p-2 md:p-3">
               <div className="relative w-full h-full rounded-full overflow-hidden">
                 <Image
-                  src="/images/customcake.webp"
+                  src="/images/custom.webp"
                   alt="Beautiful custom designed celebration cake"
                   fill
                   sizes="(max-width: 768px) 90vw, 400px"
@@ -54,7 +54,7 @@ export default function CustomCakeCTA() {
               </div>
 
               {/* Decorative Script Text floating on the side */}
-              <div className="absolute -right-4 md:-right-16 bottom-0 md:top-1/2 md:-translate-y-1/2 text-[#3A261D] transform rotate-[-10deg] translate-x-4 md:translate-x-0 z-20">
+              <div className="absolute -right-16 sm:-right-24 md:-right-32 lg:-right-40 bottom-0 md:top-1/2 md:-translate-y-1/2 text-[#3A261D] transform rotate-[-10deg] translate-x-10 md:translate-x-16 z-20">
                 <div className="bg-white/80 backdrop-blur-sm px-6 py-4 rounded-3xl shadow-sm border border-white">
                   <span className="font-script text-3xl md:text-5xl lg:text-6xl leading-tight flex flex-col items-center">
                     <span>Your</span>

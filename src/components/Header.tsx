@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 
@@ -65,10 +66,14 @@ export default function Header() {
         <div className="container mx-auto px-4 md:px-8 flex items-center justify-between">
           {/* Brand / Logo */}
           <Link href="/" className="flex items-center z-50">
-            <div className="flex flex-col items-center">
-              <span className="font-script text-4xl md:text-5xl text-[#2A1B16] leading-none -mb-1">Gul NiS</span>
-              <span className="font-sans text-[0.65rem] md:text-xs tracking-[0.2em] uppercase text-[#2A1B16]">HOMEY BAKES BY SK</span>
-            </div>
+            <Image 
+              src="/images/gulnis-logo.png" 
+              alt="Gul NiS Homey Cakes Logo" 
+              width={160} 
+              height={60} 
+              className="w-auto h-12 md:h-14 object-contain"
+              priority
+            />
           </Link>
 
           {/* Desktop Navigation (Centered) */}

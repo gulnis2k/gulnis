@@ -99,7 +99,7 @@ export default function Contact() {
                 allowFullScreen={false}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Gul NiS Homey Bakes by SK Location"
+                title="Gul NiS Homey Cakes by SK Location"
                 className="w-full h-full grayscale hover:grayscale-0 transition-all duration-700"
               ></iframe>
             </div>

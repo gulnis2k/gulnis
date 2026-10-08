@@ -5,7 +5,7 @@ import { client } from "@/sanity/lib/client";
 import { Suspense } from "react";
 
 export const metadata = {
-  title: "Our Menu | Gul NiS Homey Bakes by SK",
+  title: "Our Menu | Gul NiS Homey Cakes by SK",
   description: "Explore our full menu of freshly baked cakes, brownies, blondies, and more in Coimbatore.",
 };
 
