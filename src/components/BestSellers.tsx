@@ -100,6 +100,11 @@ export default function BestSellers({ products }: { products: Product[] }) {
                     <h3 className="font-serif font-bold text-[#3A261D] text-lg mb-1 leading-tight">
                       {product.name}
                     </h3>
+                    {product.description && (
+                      <p className="text-[#3A261D]/70 text-sm line-clamp-2 mt-1">
+                        {product.description}
+                      </p>
+                    )}
                   </div>
                   
                   <div className="flex items-center justify-between mt-auto pt-4 border-t border-[#F3EBE6]">

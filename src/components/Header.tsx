@@ -65,15 +65,13 @@ export default function Header() {
       >
         <div className="container mx-auto px-4 md:px-8 flex items-center justify-between">
           {/* Brand / Logo */}
-          <Link href="/" className="flex items-center z-50">
-            <Image 
-              src="/images/gulnis-logo.png" 
-              alt="Gul NiS Homey Cakes Logo" 
-              width={160} 
-              height={60} 
-              className="w-auto h-12 md:h-14 object-contain"
-              priority
-            />
+          <Link href="/" className="flex flex-col z-50 group">
+            <span className="font-script text-4xl md:text-[2.75rem] text-[#3A261D] group-hover:text-black transition-colors leading-none tracking-normal">
+              Gul NiS
+            </span>
+            <span className="text-[0.5rem] md:text-[0.6rem] tracking-[0.3em] md:tracking-[0.35em] uppercase font-sans font-medium text-[#3A261D] group-hover:text-black transition-colors ml-2 md:ml-4 -mt-1 md:-mt-1.5">
+              Homey Cakes by SK
+            </span>
           </Link>
 
           {/* Desktop Navigation (Centered) */}

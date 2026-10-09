@@ -97,6 +97,27 @@ export default function AllProducts({ products = [] }: { products?: any[] }) {
               </div>
             </div>
 
+            {/* Important Notice */}
+            <div className="mb-10 relative">
+              <div className="absolute left-0 top-0 bottom-0 w-1 bg-[#C18861] rounded-l-md"></div>
+              <div className="bg-[#FAF8F5] border border-[#E5D8CF] border-l-0 rounded-r-md p-5 md:p-6 shadow-sm max-w-4xl">
+                <h4 className="font-serif text-[#3A261D] text-lg font-bold mb-2 flex items-center gap-2">
+                  <svg className="w-5 h-5 text-[#C18861]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  Important Booking Information
+                </h4>
+                <div className="text-[#3A261D]/80 text-[15px] leading-relaxed space-y-2">
+                  <p>
+                    All our creations are freshly baked to order. We require a minimum of <strong className="text-[#3A261D]">12 to 16 hours</strong> advance notice before your required delivery time.
+                  </p>
+                  <p>
+                    <strong className="text-[#3A261D]">Pricing:</strong> Base prices listed are for <strong>1kg</strong>. Please refer to the product description for 500g or per-piece pricing options.
+                  </p>
+                </div>
+              </div>
+            </div>
+
             {/* Category Filters (Pills) */}
             <div className="flex flex-wrap justify-start gap-2 md:gap-3">
               {categories.map((cat) => (
@@ -151,6 +172,11 @@ export default function AllProducts({ products = [] }: { products?: any[] }) {
                     <h3 className="font-serif font-bold text-[#3A261D] text-lg mb-1 leading-tight">
                       {product.name}
                     </h3>
+                    {product.description && (
+                      <p className="text-[#3A261D]/70 text-sm line-clamp-2 mt-1">
+                        {product.description}
+                      </p>
+                    )}
                   </div>
                   
                   <div className="flex items-center justify-between mt-auto pt-4 border-t border-[#F3EBE6]">

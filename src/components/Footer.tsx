@@ -32,7 +32,8 @@ export default function Footer() {
                   alt="FSSAI License" 
                   width={240} 
                   height={80} 
-                  className="w-auto h-16 md:h-20 object-contain"
+                  className="h-16 md:h-20 object-contain"
+                  style={{ width: "auto" }}
                 />
               </div>
             </div>
