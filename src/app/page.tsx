@@ -6,6 +6,7 @@ import CustomCakeCTA from "@/components/CustomCakeCTA";
 import About from "@/components/About";
 import Gallery from "@/components/Gallery";
 import Testimonials from "@/components/Testimonials";
+import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import { client } from "@/sanity/lib/client";
@@ -27,6 +28,7 @@ export default async function Home() {
         <About />
         <Gallery />
         <Testimonials />
+        <FAQ />
         <Contact />
       </main>
       <Footer />

@@ -56,7 +56,7 @@ export default function Contact() {
                 🕒
               </div>
               <div>
-                <h4 className="font-bold text-[#3A261D] text-[0.95rem] mb-0.5">Mon - Sun</h4>
+                <h4 className="font-bold text-[#3A261D] text-[0.95rem] mb-0.5">Mon - Sat</h4>
                 <p className="text-[#3A261D]/70 text-sm">9:00 AM - 6:00 PM</p>
               </div>
             </div>

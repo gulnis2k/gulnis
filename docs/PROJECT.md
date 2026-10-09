@@ -1,14 +1,14 @@
 # Project Overview
 
-Gul Nis Homey Cakes is a premium, modern, responsive, SEO-friendly single-page bakery website. It acts as a product catalogue with WhatsApp ordering.
+Gul NiS Homey Cakes by SK is a premium, modern, responsive, SEO-friendly bakery website. It acts as a primary landing page with a dedicated product catalogue menu and WhatsApp ordering.
 
 ## Core Objectives
-- Premium aesthetic
-- Single-page architecture
-- CMS for product management
-- WhatsApp ordering integration
-- Strong SEO foundation
-- Mobile responsive
+- Premium aesthetic and responsive design.
+- Homepage with dedicated `/products` menu routing.
+- CMS (Sanity) for product management.
+- WhatsApp ordering integration.
+- Strong SEO foundation for local business in Coimbatore.
+- Mobile responsive.
 
 ## Tech Stack
 - Frontend: Next.js App Router, TypeScript, Tailwind CSS

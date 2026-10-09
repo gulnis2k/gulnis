@@ -21,10 +21,6 @@ Status: COMPLETE
 - Integrated placeholder premium bakery image
 - Call-to-action buttons for WhatsApp and Products
 
-### Technical Decisions
-- Used Tailwind for animations instead of Framer Motion to keep it lightweight.
-- Implemented smooth scrolling behavior in root layout.
-
 ## Milestone 03 — Shop by Category
 Status: COMPLETE
 
@@ -34,9 +30,6 @@ Status: COMPLETE
 - Added hover states and subtle zoom animations on category cards.
 - Connected category cards to filter the "All Products" section via URL hash parameters.
 
-### Technical Decisions
-- Used URL hash and search params `href="#products?category=slug"` approach to allow client-side filtering without page reloads, preparing for the All Products section.
-
 ## Milestone 04 — Sanity CMS + Product schema
 Status: COMPLETE
 
@@ -45,9 +38,6 @@ Status: COMPLETE
 - Defined the `Product` schema with fields for name, slug, description, price, category, image, availability, and ordering.
 - Configured `.env.local` with user-provided Sanity credentials.
 - Created Sanity Studio route at `/studio`.
-
-### Technical Decisions
-- Hosted Sanity Studio directly within the Next.js App Router for centralized maintenance.
 
 ## Milestone 05 — All Products + Filtering + WhatsApp Ordering
 Status: COMPLETE
@@ -59,10 +49,6 @@ Status: COMPLETE
 - Added mock products (temporary until data is fetched from Sanity) to demonstrate the layout.
 - Styled sold-out states and active filters.
 
-### Technical Decisions
-- Extracted categories and mock data into the component for now; to be replaced by Sanity data fetching.
-- WhatsApp number defaults to the environment variable.
-
 ## Milestone 06 — Custom Cake CTA
 Status: COMPLETE
 
@@ -70,9 +56,6 @@ Status: COMPLETE
 - Created the prominent `CustomCakeCTA` component.
 - Implemented a premium dark brown card layout with an integrated high-quality custom cake image.
 - Set up the specific WhatsApp pre-filled message for custom orders.
-
-### Technical Decisions
-- Extracted the WhatsApp integration securely without hardcoding phone numbers directly in the component tree.
 
 ## Milestone 07 — About Section
 Status: COMPLETE
@@ -127,15 +110,21 @@ Status: COMPLETE
 - Added dynamic `Product` JSON-LD schema for CMS products.
 - Ran production build validation without errors.
 
-## Milestone 13 — FINAL CLIENT DATA INTEGRATION
+## Milestone 13 — FINAL CLIENT DATA INTEGRATION & UI POLISH
 Status: COMPLETE
 
 ### Completed
-- Verified and applied official business name: "Gul NiS Homey Bakes by SK"
+- Verified and applied official business name: "Gul NiS Homey Cakes by SK"
+- Recreated the elegant text logo using script and sans-serif fonts in Header.
 - Integrated verified address, phone number (9047220070), and formatted WhatsApp links with India country code (+91).
-- Added exact verified Google Maps location embed.
+- Added exact verified Google Maps location embed and removed distracting fade animations.
 - Verified and injected correct social media URLs (Instagram, Facebook, YouTube).
+- Replaced About section image with dynamic `about.mp4` video.
 - Verified and updated operating hours (9:00 AM - 6:00 PM).
+- Added FSSAI License logo to Footer.
+- Fixed mobile clipping issues on Custom Cake section text.
+- Added elegantly styled Important Booking Notice (12-16hr advance + 1kg pricing rule) to the Products page.
+- Adjusted ShopByCategory to display as a full grid instead of a carousel.
 - Completed global brand search and purged all outdated name references.
 - Ran final production build and QA tests successfully.
 

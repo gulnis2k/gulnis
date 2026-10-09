@@ -2,7 +2,7 @@
 
 ## Application Architecture
 - **Framework**: Next.js App Router
-- **Routing**: Single-page application approach using anchor links for navigation.
+- **Routing**: Hybrid approach: A single-page scrollable homepage paired with a dedicated `/products` page for the full menu.
 - **Styling**: Tailwind CSS with custom theme variables.
 
 ## Data Flow
@@ -16,4 +16,4 @@ graph TD
 
 ## Component Architecture
 - Reusable UI elements (Buttons, Cards, Section Headings).
-- Client components only where necessary (filtering, interactive elements).
+- Client components only where necessary (filtering, interactive elements, GSAP animations).
