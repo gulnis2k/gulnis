@@ -90,9 +90,9 @@ export default function AllProducts({ products = [] }: { products?: any[] }) {
                 Our Menu
               </span>
               <div className="flex items-center gap-6">
-                <h2 className="font-serif text-3xl md:text-5xl font-bold text-[#3A261D] whitespace-nowrap">
+                <h1 className="font-serif text-3xl md:text-5xl font-bold text-[#3A261D] whitespace-nowrap">
                   All Products
-                </h2>
+                </h1>
                 <div className="flex-1 h-[1px] bg-[#E5D8CF]"></div>
               </div>
             </div>
