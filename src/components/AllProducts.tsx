@@ -112,7 +112,7 @@ export default function AllProducts({ products = [] }: { products?: any[] }) {
                     All our creations are freshly baked to order. We require a prebooking of <strong className="text-[#3A261D]">1 day</strong> advance notice before your required delivery time.
                   </p>
                   <p>
-                    <strong className="text-[#3A261D]">Pricing:</strong> Base prices listed are for <strong>1kg</strong>. Please refer to the product description for 500g or per-piece pricing options.
+                    <strong className="text-[#3A261D]">Pricing:</strong> Base prices listed are for <strong>1kg</strong>. Available as a customised jar cake. Pricing varies depending on the sponge and flavour selected.
                   </p>
                 </div>
               </div>
@@ -125,8 +125,8 @@ export default function AllProducts({ products = [] }: { products?: any[] }) {
                   key={cat.slug}
                   onClick={() => setActiveCategory(cat.slug)}
                   className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${activeCategory === cat.slug
-                      ? "bg-[#3A261D] text-white shadow-md"
-                      : "bg-[#F3EBE6] text-[#3A261D] hover:bg-[#E5D8CF]"
+                    ? "bg-[#3A261D] text-white shadow-md"
+                    : "bg-[#F3EBE6] text-[#3A261D] hover:bg-[#E5D8CF]"
                     }`}
                 >
                   {cat.name}
@@ -151,8 +151,8 @@ export default function AllProducts({ products = [] }: { products?: any[] }) {
               <div
                 key={product._id}
                 className={`bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col h-full ${filteredProducts.length < 4
-                    ? "w-[calc(50%-0.5rem)] md:w-[calc(33.333%-1rem)] lg:w-[calc(25%-1.125rem)]"
-                    : ""
+                  ? "w-[calc(50%-0.5rem)] md:w-[calc(33.333%-1rem)] lg:w-[calc(25%-1.125rem)]"
+                  : ""
                   }`}
               >
                 <div className="relative aspect-square w-full">

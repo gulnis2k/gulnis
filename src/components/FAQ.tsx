@@ -10,8 +10,8 @@ const faqs = [
     answer: "We use carefully selected ingredients, including real butter, quality maida, chocolate, eggs, cocoa powder, and other essential baking ingredients to create delicious, rich, and flavourful homemade treats."
   },
   {
-    question: "Do you use oil or margarine in your cakes?",
-    answer: "No! We use butter instead of oil or margarine in our cakes. We believe butter helps create a rich flavour and a delicious texture in every bite."
+    question: "Do your cakes contain preservatives?",
+    answer: "No, we do not add preservatives to our cakes. We focus on using carefully selected baking ingredients to prepare our homemade treats."
   },
   {
     question: "How can I place an order?",
@@ -22,8 +22,8 @@ const faqs = [
     answer: "Yes! We love making cakes for your special occasions. Contact us on WhatsApp to discuss your preferred design, flavour, size, and other customisation requirements."
   },
   {
-    question: "How can I know the price and availability of a cake?",
-    answer: "Prices and availability may vary depending on the product and customisation. Please message us on WhatsApp, and we will help you with the latest details before you place your order."
+    question: "Can all cakes be customised as jar cakes?",
+    answer: "Yes! Our cakes can be customised into jar cakes. Prices may vary depending on your choice of sponge and flavour. Please contact us on WhatsApp for pricing and availability."
   }
 ];
 

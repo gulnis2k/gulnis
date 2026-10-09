@@ -3,6 +3,7 @@ import StaggerReveal from "./animations/StaggerReveal";
 import { client } from "@/sanity/lib/client";
 import { urlForImage } from "@/sanity/lib/image";
 import type { Image } from "sanity";
+import GalleryCarousel from "./GalleryCarousel";
 
 export default async function Gallery() {
   const query = `*[_type == "gallery"][0]`;
@@ -50,39 +51,45 @@ export default async function Gallery() {
           </div>
         </FadeIn>
 
-        {/* Gallery Grid */}
-        <StaggerReveal 
-          staggerAmount={0.1} 
-          direction="up" 
-          className={
-            images.length < 4 
-              ? "flex flex-wrap justify-center gap-4" 
-              : "grid grid-cols-2 md:grid-cols-4 gap-4"
-          }
-        >
-          {images.map((img, index) => (
-            <div
-              key={index}
-              className={`relative aspect-square rounded-2xl overflow-hidden group shadow-sm border border-gray-100 ${
-                images.length === 1 
-                  ? "w-full max-w-sm" 
-                  : images.length < 4 
-                    ? "w-[calc(50%-0.5rem)] md:w-[calc(33.333%-0.67rem)] max-w-xs"
-                    : ""
-              }`}
+        {/* Gallery Content */}
+        <FadeIn direction="up" delay={0.1}>
+          {images.length >= 3 && images.length <= 8 ? (
+            <GalleryCarousel images={images} />
+          ) : (
+            <StaggerReveal 
+              staggerAmount={0.1} 
+              direction="up" 
+              className={
+                images.length < 4 
+                  ? "flex flex-wrap justify-center gap-4" 
+                  : "grid grid-cols-2 md:grid-cols-4 gap-4"
+              }
             >
-              <div className="absolute inset-0 bg-[#F3EBE6]"></div>
-              <img
-                src={img.src}
-                alt={img.alt}
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                loading="lazy"
-              />
-              {/* Hover overlay */}
-              <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            </div>
-          ))}
-        </StaggerReveal>
+              {images.map((img, index) => (
+                <div
+                  key={index}
+                  className={`relative aspect-square rounded-2xl overflow-hidden group shadow-sm border border-gray-100 ${
+                    images.length === 1 
+                      ? "w-full max-w-sm" 
+                      : images.length < 4 
+                        ? "w-[calc(50%-0.5rem)] md:w-[calc(33.333%-0.67rem)] max-w-xs"
+                        : ""
+                  }`}
+                >
+                  <div className="absolute inset-0 bg-[#F3EBE6]"></div>
+                  <img
+                    src={img.src}
+                    alt={img.alt}
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    loading="lazy"
+                  />
+                  {/* Hover overlay */}
+                  <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+              ))}
+            </StaggerReveal>
+          )}
+        </FadeIn>
       </div>
     </section>
   );
