@@ -15,7 +15,7 @@
 - Structured Data: `Product` JSON-LD schema array injected dynamically in `AllProducts` and `BestSellers` for CMS items.
 - Production build validation (TypeScript/ESLint).
 - FINAL CLIENT VERIFICATION: Official business name ("Gul NiS Homey Cakes by SK"), Address, Phone, WhatsApp, Social media, YouTube, Opening hours, and Google Maps location have been verified and integrated into the site.
+- Dynamic sitemap generation implemented: Fetches active product categories directly from Sanity to allow precise indexing.
 
 ## FUTURE SEO EXPANSION
-- Set up Google Search Console and verify `https://gulnis.in` (add verification meta tag in `layout.tsx`).
-- Dynamically generate sitemap for individual product categories.
+- Set up Google Search Console and verify `https://gulnis.in` (add verification meta tag in `layout.tsx` if requested).
