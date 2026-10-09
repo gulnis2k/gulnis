@@ -59,7 +59,7 @@ export default function Hero() {
             </span>
           </h1>
           <p className="text-lg text-light-beige max-w-lg mx-auto lg:mx-0 mb-10 leading-relaxed font-light">
-            Brownies, blondies, cookie pies, waffles, hot chocolate, cakes, and more.<br />
+            Brownies, Blondies, Cookie pies, Waffles, Hot Chocolate, Cakes, and more.<br />
             Homemade in Coimbatore to make your moments sweeter.
           </p>
 
@@ -122,10 +122,9 @@ export default function Hero() {
       {/* Decorative Script Text */}
       <div className="hero-script hidden lg:block absolute top-32 right-32 z-20 text-warm-peach transform rotate-[-5deg]">
         <span className="font-script text-5xl leading-tight opacity-90 drop-shadow-lg flex flex-col items-end">
-          <span>Good</span>
-          <span>Food</span>
-          <span>Brighter</span>
-          <span>Days ♡</span>
+          <span>Sweetness</span>
+          <span>In Every</span>
+          <span>Bite ♡</span>
         </span>
       </div>
     </section>
