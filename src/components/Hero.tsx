@@ -60,7 +60,7 @@ export default function Hero() {
           </h1>
           <p className="text-lg text-light-beige max-w-lg mx-auto lg:mx-0 mb-10 leading-relaxed font-light">
             Brownies, Blondies, Cookie pies, Waffles, Hot Chocolate, Cakes, and more.<br />
-            Homemade in Coimbatore to make your moments sweeter.
+            Little Bakes - Bringing Homemade Happiness to Every Celebration.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-12 lg:mb-20">
