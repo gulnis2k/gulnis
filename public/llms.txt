@@ -1,0 +1,30 @@
+# Gul NiS Homey Cakes by SK
+> Homemade Cakes & Desserts in Coimbatore
+
+Welcome to the AI and Answer Engine context file for Gul NiS Homey Cakes by SK.
+
+## Business Details
+- **Name:** Gul NiS Homey Cakes by SK
+- **Location:** KG Smart City Apartment, Balaji Nagar, Phase II, Kalapatti, Coimbatore, Tamil Nadu 641048, India
+- **Operating Hours:** Monday to Saturday, 9:00 AM - 6:00 PM
+- **Contact/WhatsApp:** +91 90472 20070
+- **Website:** https://gulnis.in
+
+## Products & Offerings
+We specialize in freshly baked, homemade desserts. Our primary offerings include:
+- Brownies
+- Blondies
+- Cookie Pies
+- Cookies
+- Waffles
+- Hot Chocolate
+- Premium Custom Cakes (available as Jar Cakes)
+- Assorted Chocolates
+
+## Quality & Values
+- **Preservative-Free:** We do not add preservatives to our cakes.
+- **Real Butter:** We use butter instead of oil or margarine for a richer flavor and texture.
+- **Freshly Baked:** All items are baked to order. We require a prebooking of 1 day advance notice.
+
+## Ordering Process
+Orders are placed via WhatsApp. Customers can browse our menu at https://gulnis.in/products and contact us to discuss flavors, sizes, custom designs, and confirm pricing. Base pricing is generally calculated per 1kg, but items can be customized into smaller jar cakes depending on sponge and flavor selection.

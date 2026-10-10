@@ -20,13 +20,16 @@ const greatVibes = Great_Vibes({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://gulnis.in"),
-  title: "Gul NiS Homey Cakes by SK | Homemade Cakes & Desserts in Coimbatore",
-  description: "Freshly baked brownies, blondies, cookie pies, cookies, waffles, hot chocolate, cakes, and chocolates. Homemade desserts from Gul NiS Homey Cakes by SK in Coimbatore.",
+  alternates: {
+    canonical: "/",
+  },
+  title: "Gul NiS Homey Cakes by SK | Desserts in Coimbatore",
+  description: "Freshly baked brownies, cookie pies, waffles, and custom cakes. Homemade desserts from Gul NiS Homey Cakes by SK in Coimbatore.",
   keywords: ["brownies", "blondie", "cookie pie", "cookies", "waffles", "hot chocolate", "cakes", "chocolates", "custom cakes", "homemade desserts", "Gul NiS Homey Cakes by SK", "bakery", "Coimbatore", "Tamil Nadu"],
   authors: [{ name: "Gul Nis" }],
   openGraph: {
     title: "Gul NiS Homey Cakes by SK",
-    description: "Freshly baked brownies, blondies, cookie pies, cookies, waffles, hot chocolate, cakes, and chocolates. Homemade desserts from Gul NiS Homey Cakes by SK in Coimbatore.",
+    description: "Freshly baked brownies, cookie pies, waffles, and custom cakes. Homemade desserts from Gul NiS Homey Cakes by SK in Coimbatore.",
     url: "https://gulnis.in",
     siteName: "Gul NiS Homey Cakes by SK",
     locale: "en_IN",
@@ -43,7 +46,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Gul NiS Homey Cakes by SK",
-    description: "Freshly baked brownies, blondies, cookie pies, cookies, waffles, hot chocolate, cakes, and chocolates. Homemade desserts from Gul NiS Homey Cakes by SK in Coimbatore.",
+    description: "Freshly baked brownies, cookie pies, waffles, and custom cakes. Homemade desserts from Gul NiS Homey Cakes by SK in Coimbatore.",
     images: ["/images/logo.jpeg"],
   },
   icons: {
