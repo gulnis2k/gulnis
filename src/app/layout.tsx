@@ -54,9 +54,6 @@ export const metadata: Metadata = {
       "msvalidate.01": "3FFF3B9442BE1E66F844AE4D9F40A1B6",
     },
   },
-  icons: {
-    icon: "/gulnis.svg",
-  },
 };
 
 export default function RootLayout({
