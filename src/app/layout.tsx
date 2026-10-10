@@ -49,6 +49,11 @@ export const metadata: Metadata = {
     description: "Freshly baked brownies, cookie pies, waffles, and custom cakes. Homemade desserts from Gul NiS Homey Cakes by SK in Coimbatore.",
     images: ["/images/logo.jpeg"],
   },
+  verification: {
+    other: {
+      "msvalidate.01": "3FFF3B9442BE1E66F844AE4D9F40A1B6",
+    },
+  },
   icons: {
     icon: "/gulnis.svg",
   },
