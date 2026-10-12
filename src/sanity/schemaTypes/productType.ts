@@ -45,7 +45,6 @@ export const productType = defineType({
           { title: 'Waffles', value: 'waffles' },
           { title: 'Hot chocolate', value: 'hot-chocolate' },
           { title: 'Cakes', value: 'cakes' },
-          { title: 'Chocolates', value: 'chocolates' },
         ],
       },
       validation: (rule) => rule.required(),

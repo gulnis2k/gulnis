@@ -17,7 +17,6 @@ const categories = [
   { name: "Waffles", slug: "waffles" },
   { name: "Hot chocolate", slug: "hot-chocolate" },
   { name: "Cakes", slug: "cakes" },
-  { name: "Chocolates", slug: "chocolates" },
 ];
 
 export default function AllProducts({ products = [] }: { products?: any[] }) {
@@ -35,8 +34,10 @@ export default function AllProducts({ products = [] }: { products?: any[] }) {
     }
   }, [searchParams]);
 
-  // Format products from Sanity
-  const formattedProducts = products.map((product) => ({
+  // Format products from Sanity (excluding chocolates category)
+  const formattedProducts = products
+    .filter((product) => product.category !== "chocolates")
+    .map((product) => ({
     _id: product._id,
     name: product.name,
     description: product.description,

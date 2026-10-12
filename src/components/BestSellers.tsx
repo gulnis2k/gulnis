@@ -21,11 +21,13 @@ type Product = {
 };
 
 export default function BestSellers({ products }: { products: Product[] }) {
-  // Format products from Sanity
-  const formattedProducts = products.map((product) => ({
-    ...product,
-    imageUrl: product.image ? urlForImage(product.image)?.url() : "",
-  }));
+  // Format products from Sanity (excluding chocolates)
+  const formattedProducts = products
+    .filter((product) => product.category !== "chocolates")
+    .map((product) => ({
+      ...product,
+      imageUrl: product.image ? urlForImage(product.image)?.url() : "",
+    }));
 
   // Filter for featured/best seller products and limit to maximum 8
   const bestSellers = formattedProducts

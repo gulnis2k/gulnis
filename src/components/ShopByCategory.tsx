@@ -13,8 +13,33 @@ export default function ShopByCategory() {
     { name: "Waffles", slug: "waffles", image: "/images/5waffles.webp" },
     { name: "Hot chocolate", slug: "hot-chocolate", image: "/images/6hotchocolate.webp" },
     { name: "Cakes", slug: "cakes", image: "/images/7cakes.webp" },
-    { name: "Chocolates", slug: "chocolates", image: "/images/8chocolates.webp" },
   ];
+
+  const topCategories = categories.slice(0, 4);
+  const bottomCategories = categories.slice(4);
+
+  const renderCategoryCard = (category: (typeof categories)[0]) => (
+    <Link
+      key={category.slug}
+      href={`/products?category=${category.slug}`}
+      className="group flex flex-col items-center text-center w-28 sm:w-36 md:w-44"
+    >
+      <div className="w-full aspect-square rounded-full bg-[#F3EBE6] p-[6px] mb-3 md:mb-4 relative overflow-hidden transition-transform duration-300 group-hover:-translate-y-2 group-hover:shadow-lg">
+        <div className="w-full h-full rounded-full overflow-hidden relative border-4 border-white/50">
+          <Image
+            src={category.image}
+            alt={category.name}
+            fill
+            sizes="(max-width: 768px) 150px, 200px"
+            className="object-cover transition-transform duration-500 group-hover:scale-110"
+          />
+        </div>
+      </div>
+      <h3 className="font-serif font-bold text-[#3A261D] text-sm md:text-base group-hover:text-black transition-colors">
+        {category.name}
+      </h3>
+    </Link>
+  );
 
   return (
     <section className="py-20 bg-[#FAF8F5] relative overflow-hidden">
@@ -45,31 +70,21 @@ export default function ShopByCategory() {
           </div>
         </FadeIn>
 
-        {/* Categories Grid Container */}
+        {/* Categories: Previous continuous flex-wrap on mobile/tablet, 4 top + 3 bottom on large screens */}
         <FadeIn direction="up" delay={0.1}>
-          <div className="flex flex-wrap justify-center gap-6 sm:gap-8 md:gap-12 lg:gap-14 pb-8 pt-4">
-            {categories.map((category) => (
-              <Link
-                key={category.slug}
-                href={`/products?category=${category.slug}`}
-                className="group flex flex-col items-center text-center w-28 sm:w-36 md:w-44"
-              >
-                <div className="w-full aspect-square rounded-full bg-[#F3EBE6] p-[6px] mb-3 md:mb-4 relative overflow-hidden transition-transform duration-300 group-hover:-translate-y-2 group-hover:shadow-lg">
-                  <div className="w-full h-full rounded-full overflow-hidden relative border-4 border-white/50">
-                    <Image
-                      src={category.image}
-                      alt={category.name}
-                      fill
-                      sizes="(max-width: 768px) 150px, 200px"
-                      className="object-cover transition-transform duration-500 group-hover:scale-110"
-                    />
-                  </div>
-                </div>
-                <h3 className="font-serif font-bold text-[#3A261D] text-sm md:text-base group-hover:text-black transition-colors">
-                  {category.name}
-                </h3>
-              </Link>
-            ))}
+          {/* Mobile & Tablet (< lg): Previous unified flex-wrap layout */}
+          <div className="flex flex-wrap justify-center gap-6 sm:gap-8 md:gap-12 pb-8 pt-4 lg:hidden">
+            {categories.map(renderCategoryCard)}
+          </div>
+
+          {/* Large screens (lg+): 4 on top, 3 on bottom */}
+          <div className="hidden lg:flex flex-col gap-10 pb-8 pt-4">
+            <div className="flex justify-center gap-12 lg:gap-14">
+              {topCategories.map(renderCategoryCard)}
+            </div>
+            <div className="flex justify-center gap-12 lg:gap-14">
+              {bottomCategories.map(renderCategoryCard)}
+            </div>
           </div>
         </FadeIn>
 
