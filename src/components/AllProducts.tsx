@@ -38,15 +38,15 @@ export default function AllProducts({ products = [] }: { products?: any[] }) {
   const formattedProducts = products
     .filter((product) => product.category !== "chocolates")
     .map((product) => ({
-    _id: product._id,
-    name: product.name,
-    description: product.description,
-    price: product.price,
-    category: product.category,
-    image: product.image ? urlForImage(product.image)?.url() : "",
-    imageAlt: product.imageAlt,
-    available: product.available,
-  }));
+      _id: product._id,
+      name: product.name,
+      description: product.description,
+      price: product.price,
+      category: product.category,
+      image: product.image ? urlForImage(product.image)?.url() : "",
+      imageAlt: product.imageAlt,
+      available: product.available,
+    }));
 
   const filteredProducts =
     activeCategory === "all"
@@ -113,7 +113,7 @@ export default function AllProducts({ products = [] }: { products?: any[] }) {
                     All our creations are freshly baked to order. We require a prebooking of <strong className="text-[#3A261D]">1 day</strong> advance notice before your required delivery time.
                   </p>
                   <p>
-                    <strong className="text-[#3A261D]">Pricing:</strong> Base prices listed are for <strong>1kg</strong>. Available as a customised jar cake. Pricing varies depending on the sponge and flavour selected.
+                    All types of cakes are available as customized jar cakes. Pricing varies depending on the sponge and flavour selected.
                   </p>
                 </div>
               </div>
